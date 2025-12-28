@@ -206,7 +206,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="font-[family-name:var(--font-lato)] w-full py-4 bg-gold text-charcoal hover:bg-gold-dark transition-colors tracking-wider uppercase text-sm font-medium"
+                className="font-[family-name:var(--font-lato)] w-full py-4 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase text-sm font-medium"
               >
                 Request Reservation
               </button>

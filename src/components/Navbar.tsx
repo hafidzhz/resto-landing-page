@@ -34,10 +34,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex flex-col items-start">
           <span className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-gold tracking-wide">
-            Sawangan
+            Heritage Cafe
           </span>
           <span className="font-[family-name:var(--font-lato)] text-xs text-gold-light/80 tracking-[0.3em] uppercase">
-            Restaurant
+            & Resto
           </span>
         </Link>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#reservation"
-            className="font-[family-name:var(--font-lato)] text-sm px-6 py-2.5 bg-gold text-charcoal hover:bg-gold-light transition-colors tracking-wider uppercase font-medium"
+            className="font-[family-name:var(--font-lato)] text-sm px-6 py-2.5 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase font-medium"
           >
             Reserve
           </Link>
@@ -105,7 +105,7 @@ export default function Navbar() {
             <Link
               href="#reservation"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="font-[family-name:var(--font-lato)] text-sm px-6 py-3 bg-gold text-charcoal hover:bg-gold-light transition-colors tracking-wider uppercase font-medium text-center mt-2"
+              className="font-[family-name:var(--font-lato)] text-sm px-6 py-3 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase font-medium text-center mt-2"
             >
               Reserve a Table
             </Link>

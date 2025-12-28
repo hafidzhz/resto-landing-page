@@ -1,33 +1,33 @@
 const galleryImages = [
   {
-    url: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=2070",
+    url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070",
     span: "col-span-2 row-span-2",
-    alt: "Golf course panoramic view",
+    alt: "Restaurant interior ambiance",
   },
   {
-    url: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1887",
+    url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1887",
     span: "col-span-1 row-span-1",
-    alt: "Indonesian cuisine presentation",
+    alt: "Signature plated cuisine",
   },
   {
-    url: "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?q=80&w=1974",
+    url: "https://images.unsplash.com/photo-1421622548261-c45bfe178854?q=80&w=1974",
     span: "col-span-1 row-span-1",
-    alt: "Golf course green",
+    alt: "Chef plating a dish",
   },
   {
-    url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070",
+    url: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=2070",
     span: "col-span-1 row-span-2",
-    alt: "Elegant dining room",
+    alt: "Elegant dining room setting",
   },
   {
-    url: "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=2070",
+    url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070",
     span: "col-span-1 row-span-1",
-    alt: "Golf course landscape",
+    alt: "Restaurant atmosphere",
   },
   {
-    url: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1974",
+    url: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=1974",
     span: "col-span-2 row-span-1",
-    alt: "Restaurant terrace with golf view",
+    alt: "Chef's tasting table",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Gallery() {
           </h2>
           <div className="w-20 h-[2px] bg-gold mx-auto mb-6" />
           <p className="font-[family-name:var(--font-lato)] text-white/60 max-w-2xl mx-auto">
-            A glimpse into the world of Sawangan Restaurant
+            A glimpse into the world of Heritage Cafe & Resto
           </p>
         </div>
 

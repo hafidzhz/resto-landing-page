@@ -65,7 +65,7 @@ const menuItems = {
   ],
   mains: [
     {
-      name: "Nasi Goreng Sawangan",
+      name: "Nasi Goreng Heritage",
       description: "Signature fried rice with prawns, chicken satay, and fried egg",
       price: "165.000",
       image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800",
@@ -143,7 +143,7 @@ export default function Menu() {
               onClick={() => setActiveCategory(category.id)}
               className={`font-[family-name:var(--font-lato)] px-6 py-3 text-sm tracking-wider uppercase transition-all duration-300 ${
                 activeCategory === category.id
-                  ? "bg-gold text-charcoal"
+                  ? "bg-gold text-white"
                   : "border border-gold/50 text-gold hover:border-gold"
               }`}
             >

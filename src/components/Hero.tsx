@@ -6,7 +6,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=2070')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070')`,
         }}
       />
       
@@ -18,12 +18,12 @@ export default function Hero() {
         </div>
         
         <p className="font-[family-name:var(--font-lato)] text-gold-light text-sm md:text-base tracking-[0.4em] uppercase mb-4 animate-fade-in-up">
-          By the Greens
+          Heritage Dining
         </p>
         
         <h1 className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-fade-in-up delay-100">
-          Sawangan
-          <span className="block text-gold mt-2">Restaurant</span>
+          Heritage Cafe
+          <span className="block text-gold mt-2">& Resto</span>
         </h1>
         
         <p className="font-[family-name:var(--font-lato)] text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
@@ -34,13 +34,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
           <Link
             href="#menu"
-            className="font-[family-name:var(--font-lato)] px-10 py-4 bg-gold text-charcoal hover:bg-gold-light transition-all duration-300 tracking-wider uppercase text-sm font-medium"
+            className="font-[family-name:var(--font-lato)] px-10 py-4 bg-gold text-white hover:bg-gold-dark transition-all duration-300 tracking-wider uppercase text-sm font-medium"
           >
             Explore Menu
           </Link>
           <Link
             href="#reservation"
-            className="font-[family-name:var(--font-lato)] px-10 py-4 border border-gold text-gold hover:bg-gold hover:text-charcoal transition-all duration-300 tracking-wider uppercase text-sm font-medium"
+            className="font-[family-name:var(--font-lato)] px-10 py-4 border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 tracking-wider uppercase text-sm font-medium"
           >
             Make Reservation
           </Link>

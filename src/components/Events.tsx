@@ -42,7 +42,7 @@ export default function Events() {
           </h2>
           <div className="w-20 h-[2px] bg-gold mx-auto mb-6" />
           <p className="font-[family-name:var(--font-lato)] text-charcoal/60 max-w-2xl mx-auto">
-            Transform your special moments into extraordinary experiences at Sawangan
+            Transform your special moments into extraordinary experiences at Heritage Cafe & Resto
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function Events() {
         <div className="mt-16 text-center">
           <a
             href="#contact"
-            className="inline-block font-[family-name:var(--font-lato)] px-10 py-4 bg-gold text-charcoal hover:bg-gold-dark transition-colors tracking-wider uppercase text-sm font-medium"
+            className="inline-block font-[family-name:var(--font-lato)] px-10 py-4 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase text-sm font-medium"
           >
             Inquire About Events
           </a>

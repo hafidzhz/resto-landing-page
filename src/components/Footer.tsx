@@ -8,10 +8,10 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex flex-col items-start mb-6">
               <span className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-gold tracking-wide">
-                Sawangan
+                Heritage Cafe
               </span>
               <span className="font-[family-name:var(--font-lato)] text-xs text-gold-light/80 tracking-[0.3em] uppercase">
-                Restaurant
+                & Resto
               </span>
             </Link>
             <p className="font-[family-name:var(--font-lato)] text-white/50 text-sm leading-relaxed max-w-md">
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-[family-name:var(--font-lato)] text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} Sawangan Restaurant. All rights reserved.
+            &copy; {new Date().getFullYear()} Heritage Cafe & Resto. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="font-[family-name:var(--font-lato)] text-white/40 text-sm hover:text-gold transition-colors">

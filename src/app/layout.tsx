@@ -16,7 +16,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Sawangan Restaurant | Elegant Indonesian Cuisine by the Greens",
+  title: "Heritage Cafe & Resto | Elegant Indonesian Cuisine by the Greens",
   description: "Experience exquisite Indonesian cuisine in an elegant setting beside the golf course. Perfect for fine dining, gatherings, weddings, and exclusive events.",
   keywords: "Indonesian restaurant, fine dining, wedding venue, event space, golf course restaurant, elegant dining",
 };

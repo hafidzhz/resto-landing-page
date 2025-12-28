@@ -8,7 +8,7 @@ export default function About() {
             <div
               className="relative aspect-[4/5] bg-cover bg-center"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=2070')`,
+                backgroundImage: `url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070')`,
               }}
             />
             <div className="absolute -bottom-6 -right-6 bg-gold p-6 md:p-8">
@@ -32,7 +32,7 @@ export default function About() {
             <div className="w-20 h-[2px] bg-gold mb-8" />
             
             <p className="font-[family-name:var(--font-lato)] text-charcoal/70 leading-relaxed mb-6">
-              Nestled beside the pristine greens of the golf course, Sawangan Restaurant 
+              Nestled beside the pristine greens of the golf course, Heritage Cafe & Resto 
               offers an unparalleled dining experience that celebrates the rich heritage 
               of Indonesian cuisine. Our master chefs craft each dish with passion, 
               using traditional recipes passed down through generations.
@@ -41,7 +41,7 @@ export default function About() {
             <p className="font-[family-name:var(--font-lato)] text-charcoal/70 leading-relaxed mb-8">
               Whether you&apos;re seeking an intimate dinner for two, a memorable gathering 
               with loved ones, or an exclusive venue for your special celebration, 
-              Sawangan provides the perfect backdrop for life&apos;s precious moments.
+              Heritage Cafe & Resto provides the perfect backdrop for life&apos;s precious moments.
             </p>
 
             <div className="grid grid-cols-3 gap-6 pt-4">
