@@ -179,7 +179,7 @@ Notes: ${formData.message || "None"}`;
                 </select>
                 <DatePicker
                   selected={formData.date}
-                  onChange={(date) => setFormData({ ...formData, date })}
+                  onChange={(date: Date | null) => setFormData({ ...formData, date })}
                   dateFormat="dd/MM/yyyy"
                   placeholderText="DD/MM/YYYY *"
                   className="font-[family-name:var(--font-lato)] w-full px-4 py-2.5 border border-gray-200 focus:border-gold focus:outline-none text-sm"
