@@ -12,39 +12,38 @@ export default function Hero() {
         className="object-cover object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
-      
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-transparent to-charcoal/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/10 via-transparent to-charcoal/80" />
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <div className="mb-6 flex justify-center">
-          <div className="w-24 h-[1px] bg-gold" />
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="w-10 h-[1px] bg-gold/80" />
+          <p className="font-[family-name:var(--font-lato)] text-gold-light/90 text-xs md:text-sm tracking-[0.4em] uppercase">
+            Heritage Dining
+          </p>
+          <div className="w-10 h-[1px] bg-gold/80" />
         </div>
         
-        <p className="font-[family-name:var(--font-lato)] text-gold-light text-sm md:text-base tracking-[0.4em] uppercase mb-4 animate-fade-in-up">
-          Heritage Dining
-        </p>
-        
-        <h1 className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-fade-in-up delay-100">
+        <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight">
           Heritage Cafe
-          <span className="block text-gold mt-2">& Resto</span>
+          <span className="block text-gold-light mt-3 text-3xl md:text-5xl lg:text-6xl">& Resto</span>
         </h1>
         
-        <p className="font-[family-name:var(--font-lato)] text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
+        <p className="font-[family-name:var(--font-lato)] text-sm md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed mt-4">
           Experience the finest Indonesian cuisine in an elegant setting, 
-          where culinary artistry meets breathtaking views of the golf course.
+          where culinary artistry meets the glow of Bandung’s city lights.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
           <Link
             href="#menu"
-            className="font-[family-name:var(--font-lato)] px-10 py-4 bg-gold text-white hover:bg-gold-dark transition-all duration-300 tracking-wider uppercase text-sm font-medium"
+            className="font-[family-name:var(--font-lato)] px-10 py-3 bg-gold text-white hover:bg-gold-dark transition-all duration-300 tracking-wider uppercase text-xs md:text-sm font-medium"
           >
             Explore Menu
           </Link>
           <Link
             href="#reservation"
-            className="font-[family-name:var(--font-lato)] px-10 py-4 border border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 tracking-wider uppercase text-sm font-medium"
+            className="font-[family-name:var(--font-lato)] px-10 py-3 border border-white/40 text-white hover:bg-white/10 transition-all duration-300 tracking-wider uppercase text-xs md:text-sm font-medium"
           >
             Make Reservation
           </Link>

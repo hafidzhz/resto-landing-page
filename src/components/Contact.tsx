@@ -45,9 +45,9 @@ Notes: ${formData.message || "None"}`;
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-cream bg-pattern">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section id="contact" className="py-20 md:py-28 bg-cream bg-pattern">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <p className="font-[family-name:var(--font-lato)] text-gold text-sm tracking-[0.3em] uppercase mb-4">
               Get in Touch
@@ -70,9 +70,9 @@ Notes: ${formData.message || "None"}`;
                     Location
                   </h3>
                   <p className="font-[family-name:var(--font-lato)] text-charcoal/60 text-sm">
-                    Jl. Sawangan Golf Estate No. 88<br />
-                    Sawangan, Depok 16519<br />
-                    West Java, Indonesia
+                    Heritage Resto & Cafe<br />
+                    Jl. Raya Golf Dago No.78, Cigadung<br />
+                    Kec. Cibeunying Kaler, Kabupaten Bandung, Jawa Barat 40198
                   </p>
                 </div>
               </div>
@@ -131,14 +131,18 @@ Notes: ${formData.message || "None"}`;
                 </svg>
               </a>
             </div>
+
           </div>
 
-          <div id="reservation" className="bg-white p-8 md:p-10 shadow-xl">
+          <div
+            id="reservation"
+            className="bg-white p-6 md:p-8 shadow-lg max-w-lg w-full lg:justify-self-end"
+          >
             <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-charcoal mb-6">
               Make a Reservation
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid md:grid-cols-2 gap-5">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <input
                   type="text"
                   name="name"
@@ -146,7 +150,7 @@ Notes: ${formData.message || "None"}`;
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
+                  className="font-[family-name:var(--font-lato)] w-full px-4 py-2.5 border border-gray-200 focus:border-gold focus:outline-none text-sm"
                 />
                 <input
                   type="tel"
@@ -155,16 +159,16 @@ Notes: ${formData.message || "None"}`;
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
+                  className="font-[family-name:var(--font-lato)] w-full px-4 py-2.5 border border-gray-200 focus:border-gold focus:outline-none text-sm"
                 />
               </div>
-              <div className="grid md:grid-cols-2 gap-5">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <select
                   name="guests"
                   required
                   value={formData.guests}
                   onChange={handleChange}
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm text-gray-500"
+                  className="font-[family-name:var(--font-lato)] w-full px-4 py-2.5 border border-gray-200 focus:border-gold focus:outline-none text-sm text-gray-500"
                 >
                   <option value="">Number of Guests *</option>
                   <option value="1-2">1-2 Guests</option>
@@ -178,39 +182,51 @@ Notes: ${formData.message || "None"}`;
                   onChange={(date) => setFormData({ ...formData, date })}
                   dateFormat="dd/MM/yyyy"
                   placeholderText="DD/MM/YYYY *"
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
+                  className="font-[family-name:var(--font-lato)] w-full px-4 py-2.5 border border-gray-200 focus:border-gold focus:outline-none text-sm"
                   required
                 />
               </div>
-              <div className="grid md:grid-cols-2 gap-5">
-                <select
-                  name="time"
-                  required
-                  value={formData.time}
-                  onChange={handleChange}
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm text-gray-500"
-                >
-                  <option value="">Preferred Time *</option>
-                  <option value="morning">Morning</option>
-                  <option value="afternoon">Afternoon</option>
-                  <option value="evening">Evening</option>
-                </select>
-              </div>
+              <select
+                name="time"
+                required
+                value={formData.time}
+                onChange={handleChange}
+                className="font-[family-name:var(--font-lato)] w-full px-4 py-2.5 border border-gray-200 focus:border-gold focus:outline-none text-sm text-gray-500"
+              >
+                <option value="">Preferred Time *</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
               <textarea
                 name="message"
                 placeholder="Special Requests (Optional)"
-                rows={4}
+                rows={3}
                 value={formData.message}
                 onChange={handleChange}
-                className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm resize-none"
+                className="font-[family-name:var(--font-lato)] w-full px-4 py-2.5 border border-gray-200 focus:border-gold focus:outline-none text-sm resize-none"
               />
               <button
                 type="submit"
-                className="font-[family-name:var(--font-lato)] w-full py-4 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase text-sm font-medium"
+                className="font-[family-name:var(--font-lato)] w-full py-3 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase text-sm font-medium"
               >
                 Chat on WhatsApp
               </button>
             </form>
+          </div>
+        </div>
+
+        <div className="mt-12 overflow-hidden border border-gold/20 bg-white/80 shadow-sm">
+          <div className="relative w-full aspect-[16/9]">
+            <iframe
+              title="Heritage Resto & Cafe Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.195100966245!2d107.62302057584259!3d-6.867209393131405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7d3eead37c7%3A0x27b669b56bc47fed!2sHERITAGE%20RESTO%20%26%20CAFE!5e0!3m2!1sen!2sid!4v1766917499694!5m2!1sen!2sid"
+              className="absolute inset-0 h-full w-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>

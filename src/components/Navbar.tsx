@@ -33,7 +33,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex flex-col items-start">
-          <span className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-gold tracking-wide">
+          <span className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-white tracking-wide">
             Heritage Cafe
           </span>
           <span className="font-[family-name:var(--font-lato)] text-xs text-gold-light/80 tracking-[0.3em] uppercase">
