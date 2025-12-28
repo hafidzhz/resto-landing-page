@@ -17,10 +17,10 @@ export default function About() {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-gold p-4 md:p-8">
-              <p className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-charcoal">
+              <p className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white">
                 15+
               </p>
-              <p className="font-[family-name:var(--font-lato)] text-sm text-charcoal/80 tracking-wider uppercase">
+              <p className="font-[family-name:var(--font-lato)] text-sm text-white/90 tracking-wider uppercase">
                 Years of Excellence
               </p>
             </div>

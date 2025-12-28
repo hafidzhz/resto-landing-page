@@ -1,22 +1,41 @@
 "use client";
 
 import { useState } from "react";
+import DatePicker from "react-datepicker";
+import { format } from "date-fns";
+
+type FormData = {
+  name: string;
+  phone: string;
+  date: Date | null;
+  time: string;
+  guests: string;
+  message: string;
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
-    email: "",
     phone: "",
-    date: "",
+    date: null,
     time: "",
     guests: "",
-    occasion: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your reservation request! We will contact you shortly to confirm.");
+    const phoneNumber = "6281234567890";
+    const formattedDate = formData.date ? format(formData.date, "dd/MM/yyyy") : "Not specified";
+    const whatsappMessage = `Reservation request:
+Name: ${formData.name}
+Phone: ${formData.phone}
+Date: ${formattedDate}
+Time: ${formData.time}
+Guests: ${formData.guests || "Not specified"}
+Notes: ${formData.message || "None"}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   const handleChange = (
@@ -130,25 +149,16 @@ export default function Contact() {
                   className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
                 />
                 <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address *"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
-                />
-              </div>
-              <div className="grid md:grid-cols-2 gap-5">
-                <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number *"
+                  placeholder="WhatsApp Number *"
                   required
                   value={formData.phone}
                   onChange={handleChange}
                   className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
                 />
+              </div>
+              <div className="grid md:grid-cols-2 gap-5">
                 <select
                   name="guests"
                   required
@@ -163,42 +173,32 @@ export default function Contact() {
                   <option value="7-10">7-10 Guests</option>
                   <option value="10+">More than 10</option>
                 </select>
+                <DatePicker
+                  selected={formData.date}
+                  onChange={(date) => setFormData({ ...formData, date })}
+                  dateFormat="dd/MM/yyyy"
+                  placeholderText="DD/MM/YYYY *"
+                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
+                  required
+                />
               </div>
               <div className="grid md:grid-cols-2 gap-5">
-                <input
-                  type="date"
-                  name="date"
-                  required
-                  value={formData.date}
-                  onChange={handleChange}
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
-                />
-                <input
-                  type="time"
+                <select
                   name="time"
                   required
                   value={formData.time}
                   onChange={handleChange}
-                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm"
-                />
+                  className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm text-gray-500"
+                >
+                  <option value="">Preferred Time *</option>
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                  <option value="evening">Evening</option>
+                </select>
               </div>
-              <select
-                name="occasion"
-                value={formData.occasion}
-                onChange={handleChange}
-                className="font-[family-name:var(--font-lato)] w-full px-4 py-3 border border-gray-200 focus:border-gold focus:outline-none text-sm text-gray-500"
-              >
-                <option value="">Select Occasion (Optional)</option>
-                <option value="casual">Casual Dining</option>
-                <option value="birthday">Birthday Celebration</option>
-                <option value="anniversary">Anniversary</option>
-                <option value="business">Business Dinner</option>
-                <option value="wedding">Wedding Inquiry</option>
-                <option value="event">Private Event</option>
-              </select>
               <textarea
                 name="message"
-                placeholder="Special Requests or Notes"
+                placeholder="Special Requests (Optional)"
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
@@ -208,7 +208,7 @@ export default function Contact() {
                 type="submit"
                 className="font-[family-name:var(--font-lato)] w-full py-4 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase text-sm font-medium"
               >
-                Request Reservation
+                Chat on WhatsApp
               </button>
             </form>
           </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20 sm:pt-0 sm:pb-0">
       <Image
         src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070"
         alt="Restaurant interior"
@@ -51,7 +51,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden sm:block">
         <Link href="#about" aria-label="Scroll down">
           <svg
             className="w-6 h-6 text-gold"

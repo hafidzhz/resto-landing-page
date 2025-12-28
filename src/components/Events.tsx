@@ -76,7 +76,7 @@ export default function Events() {
                   {event.features.map((feature, idx) => (
                     <span
                       key={idx}
-                      className="font-[family-name:var(--font-lato)] text-[10px] md:text-xs text-gold border border-gold/50 px-1.5 md:px-2 py-0.5 md:py-1"
+                      className="font-[family-name:var(--font-lato)] text-[10px] md:text-xs text-white border border-white/20 bg-charcoal/60 px-1.5 md:px-2 py-0.5 md:py-1"
                     >
                       {feature}
                     </span>

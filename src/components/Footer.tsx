@@ -14,7 +14,7 @@ export default function Footer() {
                 & Resto
               </span>
             </Link>
-            <p className="font-[family-name:var(--font-lato)] text-white/50 text-sm leading-relaxed max-w-md">
+            <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm leading-relaxed max-w-md">
               Experience the finest Indonesian cuisine in an elegant setting beside the golf course. 
               Where tradition meets modern luxury.
             </p>
@@ -25,19 +25,19 @@ export default function Footer() {
               Quick Links
             </h4>
             <nav className="flex flex-col gap-3">
-              <Link href="#about" className="font-[family-name:var(--font-lato)] text-white/50 text-sm hover:text-gold transition-colors">
+              <Link href="#about" className="font-[family-name:var(--font-lato)] text-white/70 text-sm hover:text-white transition-colors">
                 About Us
               </Link>
-              <Link href="#menu" className="font-[family-name:var(--font-lato)] text-white/50 text-sm hover:text-gold transition-colors">
+              <Link href="#menu" className="font-[family-name:var(--font-lato)] text-white/70 text-sm hover:text-white transition-colors">
                 Our Menu
               </Link>
-              <Link href="#events" className="font-[family-name:var(--font-lato)] text-white/50 text-sm hover:text-gold transition-colors">
+              <Link href="#events" className="font-[family-name:var(--font-lato)] text-white/70 text-sm hover:text-white transition-colors">
                 Events
               </Link>
-              <Link href="#gallery" className="font-[family-name:var(--font-lato)] text-white/50 text-sm hover:text-gold transition-colors">
+              <Link href="#gallery" className="font-[family-name:var(--font-lato)] text-white/70 text-sm hover:text-white transition-colors">
                 Gallery
               </Link>
-              <Link href="#reservation" className="font-[family-name:var(--font-lato)] text-white/50 text-sm hover:text-gold transition-colors">
+              <Link href="#reservation" className="font-[family-name:var(--font-lato)] text-white/70 text-sm hover:text-white transition-colors">
                 Reservations
               </Link>
             </nav>
@@ -48,13 +48,13 @@ export default function Footer() {
               Contact
             </h4>
             <div className="flex flex-col gap-3">
-              <p className="font-[family-name:var(--font-lato)] text-white/50 text-sm">
+              <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm">
                 +62 21 7788 9900
               </p>
-              <p className="font-[family-name:var(--font-lato)] text-white/50 text-sm">
+              <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm">
                 reservations@sawangan.id
               </p>
-              <p className="font-[family-name:var(--font-lato)] text-white/50 text-sm">
+              <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm">
                 Jl. Sawangan Golf Estate No. 88<br />
                 Sawangan, Depok 16519
               </p>
@@ -63,14 +63,14 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-[family-name:var(--font-lato)] text-white/40 text-sm">
+          <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm">
             &copy; {new Date().getFullYear()} Heritage Cafe & Resto. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="font-[family-name:var(--font-lato)] text-white/40 text-sm hover:text-gold transition-colors">
+            <Link href="#" className="font-[family-name:var(--font-lato)] text-white/70 text-sm hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="font-[family-name:var(--font-lato)] text-white/40 text-sm hover:text-gold transition-colors">
+            <Link href="#" className="font-[family-name:var(--font-lato)] text-white/70 text-sm hover:text-white transition-colors">
               Terms of Service
             </Link>
           </div>

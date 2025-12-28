@@ -144,7 +144,7 @@ export default function Menu() {
               className={`font-[family-name:var(--font-lato)] px-3 py-2 md:px-6 md:py-3 text-xs md:text-sm tracking-wider uppercase transition-all duration-300 ${
                 activeCategory === category.id
                   ? "bg-gold text-white"
-                  : "border border-gold/50 text-gold hover:border-gold"
+                  : "border border-gold/50 text-white/80 hover:border-gold hover:text-white"
               }`}
             >
               {category.label}
@@ -172,7 +172,7 @@ export default function Menu() {
                   <h3 className="font-[family-name:var(--font-playfair)] text-base md:text-xl text-white group-hover:text-gold transition-colors">
                     {item.name}
                   </h3>
-                  <span className="font-[family-name:var(--font-lato)] text-gold font-medium text-xs md:text-base whitespace-nowrap">
+                  <span className="font-[family-name:var(--font-lato)] text-white/90 font-medium text-xs md:text-base whitespace-nowrap">
                     IDR {item.price}
                   </span>
                 </div>
