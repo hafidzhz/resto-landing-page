@@ -1,14 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070')`,
-        }}
+      <Image
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070"
+        alt="Restaurant interior"
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
       />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
       
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-transparent to-charcoal/80" />
 

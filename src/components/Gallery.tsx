@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const galleryImages = [
   {
     url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070",
-    span: "col-span-2 row-span-2",
+    span: "col-span-1 md:col-span-2 row-span-1 md:row-span-2",
     alt: "Restaurant interior ambiance",
   },
   {
@@ -16,7 +18,7 @@ const galleryImages = [
   },
   {
     url: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=2070",
-    span: "col-span-1 row-span-2",
+    span: "col-span-1 row-span-1 md:row-span-2",
     alt: "Elegant dining room setting",
   },
   {
@@ -26,7 +28,7 @@ const galleryImages = [
   },
   {
     url: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=1974",
-    span: "col-span-2 row-span-1",
+    span: "col-span-1 md:col-span-2 row-span-1",
     alt: "Chef's tasting table",
   },
 ];
@@ -48,19 +50,22 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[200px]">
           {galleryImages.map((image, index) => (
             <div
               key={index}
               className={`group relative overflow-hidden ${image.span} cursor-pointer`}
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url('${image.url}')` }}
+              <Image
+                src={image.url}
+                alt={image.alt}
+                fill
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <svg
-                  className="w-12 h-12 text-gold"
+                  className="w-10 h-10 md:w-12 md:h-12 text-gold"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

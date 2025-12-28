@@ -136,12 +136,12 @@ export default function Menu() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
           {menuCategories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`font-[family-name:var(--font-lato)] px-6 py-3 text-sm tracking-wider uppercase transition-all duration-300 ${
+              className={`font-[family-name:var(--font-lato)] px-3 py-2 md:px-6 md:py-3 text-xs md:text-sm tracking-wider uppercase transition-all duration-300 ${
                 activeCategory === category.id
                   ? "bg-gold text-white"
                   : "border border-gold/50 text-gold hover:border-gold"
@@ -152,31 +152,31 @@ export default function Menu() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {menuItems[activeCategory as keyof typeof menuItems].map((item, index) => (
             <div
               key={index}
-              className="group flex gap-5 p-4 border border-gold/20 hover:border-gold/50 transition-all duration-300 bg-charcoal/50"
+              className="group flex gap-3 md:gap-5 p-3 md:p-4 border border-gold/20 hover:border-gold/50 transition-all duration-300 bg-charcoal/50"
             >
-              <div className="relative w-28 h-28 md:w-32 md:h-32 flex-shrink-0 overflow-hidden">
+              <div className="relative w-20 h-20 md:w-32 md:h-32 flex-shrink-0 overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 112px, 128px"
+                  sizes="(max-width: 768px) 80px, 128px"
                 />
               </div>
               <div className="flex flex-col justify-center flex-1 min-w-0">
-                <div className="flex justify-between items-start gap-2 mb-2">
-                  <h3 className="font-[family-name:var(--font-playfair)] text-lg md:text-xl text-white group-hover:text-gold transition-colors">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-1 md:gap-2 mb-1 md:mb-2">
+                  <h3 className="font-[family-name:var(--font-playfair)] text-base md:text-xl text-white group-hover:text-gold transition-colors">
                     {item.name}
                   </h3>
-                  <span className="font-[family-name:var(--font-lato)] text-gold font-medium text-sm md:text-base whitespace-nowrap">
+                  <span className="font-[family-name:var(--font-lato)] text-gold font-medium text-xs md:text-base whitespace-nowrap">
                     IDR {item.price}
                   </span>
                 </div>
-                <p className="font-[family-name:var(--font-lato)] text-white/50 text-sm leading-relaxed line-clamp-2">
+                <p className="font-[family-name:var(--font-lato)] text-white/50 text-xs md:text-sm leading-relaxed line-clamp-2">
                   {item.description}
                 </p>
               </div>

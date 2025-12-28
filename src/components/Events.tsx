@@ -1,31 +1,33 @@
+import Image from "next/image";
+
 const events = [
   {
     title: "Wedding Celebrations",
     description:
       "Create unforgettable memories with our bespoke wedding packages. From intimate ceremonies to grand receptions, our team ensures every detail is perfect.",
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070",
-    features: ["Capacity up to 200 guests", "Custom menu design", "Dedicated event coordinator"],
+    features: ["Up to 200 guests", "Custom menu", "Event coordinator"],
   },
   {
     title: "Corporate Events",
     description:
       "Impress clients and colleagues with our sophisticated venue. Ideal for business dinners, product launches, and corporate gatherings.",
     image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069",
-    features: ["AV equipment available", "Private meeting rooms", "Tailored catering menus"],
+    features: ["AV equipment", "Meeting rooms", "Tailored catering"],
   },
   {
     title: "Private Gatherings",
     description:
       "Celebrate life's milestones in style. Birthday parties, anniversaries, family reunions - we make every occasion special.",
     image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2070",
-    features: ["Flexible seating arrangements", "Personalized decorations", "Special dietary accommodations"],
+    features: ["Flexible seating", "Decorations", "Dietary options"],
   },
   {
     title: "Mini Concerts",
     description:
       "Experience live music in an intimate setting. Our venue hosts exclusive performances with exceptional acoustics and ambiance.",
     image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2074",
-    features: ["Professional sound system", "Stage setup available", "VIP seating options"],
+    features: ["Sound system", "Stage setup", "VIP seating"],
   },
 ];
 
@@ -46,30 +48,35 @@ export default function Events() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {events.map((event, index) => (
             <div
               key={index}
               className="group relative overflow-hidden bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div
-                className="h-64 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url('${event.image}')` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent" />
+              <div className="relative h-48 md:h-64 overflow-hidden">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/60 to-transparent" />
               
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white mb-2">
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8">
+                <h3 className="font-[family-name:var(--font-playfair)] text-xl md:text-2xl font-bold text-white mb-1 md:mb-2">
                   {event.title}
                 </h3>
-                <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm leading-relaxed mb-4">
+                <p className="font-[family-name:var(--font-lato)] text-white/70 text-xs md:text-sm leading-relaxed mb-2 md:mb-4 line-clamp-2 md:line-clamp-none">
                   {event.description}
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {event.features.map((feature, idx) => (
                     <span
                       key={idx}
-                      className="font-[family-name:var(--font-lato)] text-xs text-gold border border-gold/50 px-3 py-1"
+                      className="font-[family-name:var(--font-lato)] text-[10px] md:text-xs text-gold border border-gold/50 px-1.5 md:px-2 py-0.5 md:py-1"
                     >
                       {feature}
                     </span>

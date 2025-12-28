@@ -1,17 +1,22 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="about" className="py-24 md:py-32 bg-cream bg-pattern">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className="relative">
-            <div className="absolute -top-6 -left-6 w-full h-full border-2 border-gold/30" />
-            <div
-              className="relative aspect-[4/5] bg-cover bg-center"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070')`,
-              }}
-            />
-            <div className="absolute -bottom-6 -right-6 bg-gold p-6 md:p-8">
+          <div className="relative mx-4 md:mx-0">
+            <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-full h-full border-2 border-gold/30" />
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070"
+                alt="Restaurant ambiance"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-gold p-4 md:p-8">
               <p className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-charcoal">
                 15+
               </p>
