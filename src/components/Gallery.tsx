@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 const galleryImages = [
@@ -34,6 +37,8 @@ const galleryImages = [
 ];
 
 export default function Gallery() {
+  const [activeImage, setActiveImage] = useState<(typeof galleryImages)[number] | null>(null);
+
   return (
     <section id="gallery" className="py-24 md:py-32 bg-charcoal">
       <div className="max-w-7xl mx-auto px-6">
@@ -55,6 +60,15 @@ export default function Gallery() {
             <div
               key={index}
               className={`group relative overflow-hidden ${image.span} cursor-pointer`}
+              role="button"
+              tabIndex={0}
+              onClick={() => setActiveImage(image)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setActiveImage(image);
+                }
+              }}
             >
               <Image
                 src={image.url}
@@ -82,6 +96,41 @@ export default function Gallery() {
           ))}
         </div>
       </div>
+
+      {activeImage ? (
+        <div
+          className="fixed inset-0 z-50 bg-charcoal/90 backdrop-blur-sm flex items-center justify-center px-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeImage.alt}
+          onClick={() => setActiveImage(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl bg-charcoal"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute -top-12 right-0 text-white/80 hover:text-white text-sm tracking-wider uppercase"
+              onClick={() => setActiveImage(null)}
+            >
+              Close
+            </button>
+            <div className="relative w-full aspect-[4/3]">
+              <Image
+                src={activeImage.url}
+                alt={activeImage.alt}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 900px"
+              />
+            </div>
+            <div className="px-4 py-3 text-white/70 text-sm">
+              {activeImage.alt}
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

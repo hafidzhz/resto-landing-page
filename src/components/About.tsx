@@ -39,8 +39,9 @@ export default function About() {
             <p className="font-[family-name:var(--font-lato)] text-charcoal/70 leading-relaxed mb-6">
               Nestled beside the pristine greens of the golf course, Heritage Cafe & Resto 
               offers an unparalleled dining experience that celebrates the rich heritage 
-              of Indonesian cuisine. Our master chefs craft each dish with passion, 
-              using traditional recipes passed down through generations.
+              of Indonesian cuisine. As night falls, the ambiance comes alive with warm 
+              lamps and the sparkling Bandung city view. Our master chefs craft each dish 
+              with passion, using traditional recipes passed down through generations.
             </p>
             
             <p className="font-[family-name:var(--font-lato)] text-charcoal/70 leading-relaxed mb-8">
