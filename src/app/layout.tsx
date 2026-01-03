@@ -16,9 +16,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Heritage Cafe & Resto | Elegant Indonesian Cuisine by the Greens",
-  description: "Experience exquisite Indonesian cuisine in an elegant setting beside the golf course. Perfect for fine dining, gatherings, weddings, and exclusive events.",
-  keywords: "Indonesian restaurant, fine dining, wedding venue, event space, golf course restaurant, elegant dining",
+  title: "Heritage Cafe & Resto | Elevated Dining in Dago, Bandung",
+  description: "Experience panoramic views and timeless Indonesian cuisine in heart of Dago highlands. From intimate dinners to grand celebrations, find your perfect moment at Heritage.",
+  keywords: "Heritage Cafe, Dago restaurant, Bandung dining, panoramic views, Indonesian cuisine, wedding venue, event space, family restaurant, romantic dinner, corporate events",
 };
 
 export default function RootLayout({

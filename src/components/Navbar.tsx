@@ -18,6 +18,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#menu", label: "Menu" },
+    { href: "#moments", label: "Moments" },
     { href: "#events", label: "Events" },
     { href: "#gallery", label: "Gallery" },
     { href: "#contact", label: "Contact" },
@@ -27,7 +28,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-charcoal/95 backdrop-blur-md shadow-lg py-4"
+          ? "bg-forest-deep/95 backdrop-blur-md shadow-lg py-4"
           : "bg-transparent py-6"
       }`}
     >
@@ -36,7 +37,7 @@ export default function Navbar() {
           <span className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-white tracking-wide">
             Heritage Cafe
           </span>
-          <span className="font-[family-name:var(--font-lato)] text-xs text-gold-light/80 tracking-[0.3em] uppercase">
+          <span className="font-[family-name:var(--font-lato)] text-xs text-highland-green/80 tracking-[0.3em] uppercase">
             & Resto
           </span>
         </Link>
@@ -46,14 +47,14 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-[family-name:var(--font-lato)] text-sm text-white/90 hover:text-gold transition-colors tracking-wider uppercase"
+              className="font-[family-name:var(--font-lato)] text-sm text-white/90 hover:text-heritage-gold transition-colors tracking-wider uppercase"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="#reservation"
-            className="font-[family-name:var(--font-lato)] text-sm px-6 py-2.5 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase font-medium"
+            className="font-[family-name:var(--font-lato)] text-sm px-6 py-2.5 bg-heritage-gold text-white hover:bg-sunset-amber transition-colors tracking-wider uppercase font-medium rounded"
           >
             Reserve
           </Link>
@@ -90,14 +91,14 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-charcoal/98 backdrop-blur-md border-t border-gold/20 mt-4">
+        <div className="md:hidden bg-forest-deep/98 backdrop-blur-md border-t border-heritage-gold/20 mt-4">
           <div className="px-6 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-[family-name:var(--font-lato)] text-sm text-white/90 hover:text-gold transition-colors tracking-wider uppercase py-2"
+                className="font-[family-name:var(--font-lato)] text-sm text-white/90 hover:text-heritage-gold transition-colors tracking-wider uppercase py-2"
               >
                 {link.label}
               </Link>
@@ -105,7 +106,7 @@ export default function Navbar() {
             <Link
               href="#reservation"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="font-[family-name:var(--font-lato)] text-sm px-6 py-3 bg-gold text-white hover:bg-gold-dark transition-colors tracking-wider uppercase font-medium text-center mt-2"
+              className="font-[family-name:var(--font-lato)] text-sm px-6 py-3 bg-heritage-gold text-white hover:bg-sunset-amber transition-colors tracking-wider uppercase font-medium text-center mt-2 rounded"
             >
               Reserve a Table
             </Link>
